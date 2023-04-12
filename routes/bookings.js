@@ -10,3 +10,4 @@ router.get("/:id",verifyUser, getBooking);
 router.get("/",verifyAdmin, getAllBooking);
 
 export default router;
+ 

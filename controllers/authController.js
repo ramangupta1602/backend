@@ -17,13 +17,13 @@ export const register = async(req, res) => {
             email: req.body.email,
             password: hash,
         })
-
+ 
         await newUser.save()
 
         res.status(200).json({success:true, message:"Successfully created"});
         
     }catch (err){
-        res.status(500).json({success:false, message:"Failed to create. Try again"}); 
+        res.status(500).json({success:false, message:err.message}); 
     }
 }
 

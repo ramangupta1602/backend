@@ -12,7 +12,7 @@ const verifyToken = (req,res,next) => {
         if(err){
             return res.status(401).json({success: false, message: "token is invalid"});
         }
-
+ 
         req.user = user;
         // don't forget to call next
         next();

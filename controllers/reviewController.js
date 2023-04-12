@@ -10,7 +10,7 @@ export const createReview = async(req, res) => {
 
         const savedReview = await newReview.save();
 
-        // after creating a new review now update the reviews array of the tour
+         // after creating a new review now update the reviews array of the tour
         await Tour.findByIdAndUpdate(tourId, {
             $push: {reviews: savedReview._id}
         });

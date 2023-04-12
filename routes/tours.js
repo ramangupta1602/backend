@@ -12,7 +12,7 @@ router.put("/:id",verifyAdmin, updateTour);
 
 router.delete("/:id",verifyAdmin, deleteTour);
 
-router.get("/:id", getSingleTour);
+router.get("/:id", getSingleTour); 
 
 router.get("/", getAllTour);
 

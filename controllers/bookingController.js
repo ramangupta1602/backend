@@ -4,7 +4,7 @@ export const createBooking = async(req,res) =>{
 
     const newBooking = new Booking(req.body);
 
-    try {
+     try {
 
         const savedBooking = await newBooking.save();
         res.status(200).json({
